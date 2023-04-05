@@ -1,0 +1,178 @@
+
+const sells = [
+    {representante: "R1", mes: 1, producto: 1, cantidad: 100},
+    {representante: "R1", mes: 1, producto: 2, cantidad: 200},
+    {representante: "R1", mes: 1, producto: 3, cantidad: 300},
+    {representante: "R1", mes: 1, producto: 4, cantidad: 400},
+    {representante: "R1", mes: 2, producto: 1, cantidad: 500},
+    {representante: "R1", mes: 2, producto: 2, cantidad: 600},
+    {representante: "R1", mes: 2, producto: 3, cantidad: 700},
+    {representante: "R1", mes: 2, producto: 4, cantidad: 800},
+    {representante: "R1", mes: 3, producto: 1, cantidad: 900},
+    {representante: "R1", mes: 3, producto: 2, cantidad: 500},
+    {representante: "R1", mes: 3, producto: 3, cantidad: 600},
+    {representante: "R1", mes: 3, producto: 4, cantidad: 400},
+    {representante: "R1", mes: 4, producto: 1, cantidad: 300},
+    {representante: "R1", mes: 4, producto: 2, cantidad: 200},
+    {representante: "R1", mes: 4, producto: 3, cantidad: 100},
+    {representante: "R1", mes: 4, producto: 4, cantidad: 900},
+    {representante: "R1", mes: 5, producto: 1, cantidad: 800},
+    {representante: "R1", mes: 5, producto: 2, cantidad: 700},
+    {representante: "R1", mes: 5, producto: 3, cantidad: 600},
+    {representante: "R1", mes: 5, producto: 4, cantidad: 500},
+    {representante: "R1", mes: 6, producto: 1, cantidad: 400},
+    {representante: "R1", mes: 6, producto: 2, cantidad: 300},
+    {representante: "R1", mes: 6, producto: 3, cantidad: 200},
+    {representante: "R1", mes: 6, producto: 4, cantidad: 100},
+    {representante: "R1", mes: 7, producto: 1, cantidad: 900},
+    {representante: "R1", mes: 7, producto: 2, cantidad: 800},
+    {representante: "R1", mes: 7, producto: 3, cantidad: 700},
+    {representante: "R1", mes: 7, producto: 4, cantidad: 600},
+    {representante: "R1", mes: 8, producto: 1, cantidad: 500},
+    {representante: "R1", mes: 8, producto: 2, cantidad: 400},
+    {representante: "R1", mes: 8, producto: 3, cantidad: 300},
+    {representante: "R1", mes: 8, producto: 4, cantidad: 200},
+    {representante: "R1", mes: 9, producto: 1, cantidad: 100},
+    {representante: "R1", mes: 9, producto: 2, cantidad: 900},
+    {representante: "R1", mes: 9, producto: 3, cantidad: 800},
+    {representante: "R1", mes: 9, producto: 4, cantidad: 700},
+    {representante: "R1", mes: 10, producto: 1, cantidad: 600},
+    {representante: "R1", mes: 10, producto: 2, cantidad: 500},
+    {representante: "R1", mes: 10, producto: 3, cantidad: 400},
+    {representante: "R1", mes: 10, producto: 4, cantidad: 340},
+    {representante: "R1", mes: 11, producto: 1, cantidad: 280},
+    {representante: "R1", mes: 11, producto: 2, cantidad: 100},
+    {representante: "R1", mes: 11, producto: 3, cantidad: 1000},
+    {representante: "R1", mes: 11, producto: 4, cantidad: 800},
+    {representante: "R1", mes: 12, producto: 1, cantidad: 700},
+    {representante: "R1", mes: 12, producto: 2, cantidad: 600},
+    {representante: "R1", mes: 12, producto: 3, cantidad: 500},
+    {representante: "R1", mes: 12, producto: 4, cantidad: 400},
+
+
+    {representante: "R2", mes: 1, producto: 1, cantidad: 100},
+    {representante: "R2", mes: 1, producto: 2, cantidad: 200},
+    {representante: "R2", mes: 1, producto: 3, cantidad: 300},
+    {representante: "R2", mes: 1, producto: 4, cantidad: 400},
+    {representante: "R2", mes: 2, producto: 1, cantidad: 500},
+    {representante: "R2", mes: 2, producto: 2, cantidad: 600},
+    {representante: "R2", mes: 2, producto: 3, cantidad: 700},
+    {representante: "R2", mes: 2, producto: 4, cantidad: 800},
+    {representante: "R2", mes: 3, producto: 1, cantidad: 900},
+    {representante: "R2", mes: 3, producto: 2, cantidad: 500},
+    {representante: "R2", mes: 3, producto: 3, cantidad: 600},
+    {representante: "R2", mes: 3, producto: 4, cantidad: 400},
+    {representante: "R2", mes: 4, producto: 1, cantidad: 300},
+    {representante: "R2", mes: 4, producto: 2, cantidad: 200},
+    {representante: "R2", mes: 4, producto: 3, cantidad: 100},
+    {representante: "R2", mes: 4, producto: 4, cantidad: 900},
+    {representante: "R2", mes: 5, producto: 1, cantidad: 800},
+    {representante: "R2", mes: 5, producto: 2, cantidad: 700},
+    {representante: "R2", mes: 5, producto: 3, cantidad: 600},
+    {representante: "R2", mes: 5, producto: 4, cantidad: 500},
+    {representante: "R2", mes: 6, producto: 1, cantidad: 400},
+    {representante: "R2", mes: 6, producto: 2, cantidad: 300},
+    {representante: "R2", mes: 6, producto: 3, cantidad: 200},
+    {representante: "R2", mes: 6, producto: 4, cantidad: 100},
+    {representante: "R2", mes: 7, producto: 1, cantidad: 900},
+    {representante: "R2", mes: 7, producto: 2, cantidad: 800},
+    {representante: "R2", mes: 7, producto: 3, cantidad: 700},
+    {representante: "R2", mes: 7, producto: 4, cantidad: 600},
+    {representante: "R2", mes: 8, producto: 1, cantidad: 500},
+    {representante: "R2", mes: 8, producto: 2, cantidad: 400},
+    {representante: "R2", mes: 8, producto: 3, cantidad: 300},
+    {representante: "R2", mes: 8, producto: 4, cantidad: 200},
+    {representante: "R2", mes: 9, producto: 1, cantidad: 100},
+    {representante: "R2", mes: 9, producto: 2, cantidad: 900},
+    {representante: "R2", mes: 9, producto: 3, cantidad: 800},
+    {representante: "R2", mes: 9, producto: 4, cantidad: 700},
+    {representante: "R2", mes: 10, producto: 1, cantidad: 600},
+    {representante: "R2", mes: 10, producto: 2, cantidad: 500},
+    {representante: "R2", mes: 10, producto: 3, cantidad: 400},
+    {representante: "R2", mes: 10, producto: 4, cantidad: 300},
+    {representante: "R2", mes: 11, producto: 1, cantidad: 200},
+    {representante: "R2", mes: 11, producto: 2, cantidad: 100},
+    {representante: "R2", mes: 11, producto: 3, cantidad: 900},
+    {representante: "R2", mes: 11, producto: 4, cantidad: 800},
+    {representante: "R2", mes: 12, producto: 1, cantidad: 700},
+    {representante: "R2", mes: 12, producto: 2, cantidad: 600},
+    {representante: "R2", mes: 12, producto: 3, cantidad: 500},
+    {representante: "R2", mes: 12, producto: 4, cantidad: 400},
+
+    
+    {representante: "R3", mes: 1, producto: 1, cantidad: 100},
+    {representante: "R3", mes: 1, producto: 2, cantidad: 200},
+    {representante: "R3", mes: 1, producto: 3, cantidad: 300},
+    {representante: "R3", mes: 1, producto: 4, cantidad: 400},
+    {representante: "R3", mes: 2, producto: 1, cantidad: 500},
+    {representante: "R3", mes: 2, producto: 2, cantidad: 600},
+    {representante: "R3", mes: 2, producto: 3, cantidad: 700},
+    {representante: "R3", mes: 2, producto: 4, cantidad: 800},
+    {representante: "R3", mes: 3, producto: 1, cantidad: 900},
+    {representante: "R3", mes: 3, producto: 2, cantidad: 500},
+    {representante: "R3", mes: 3, producto: 3, cantidad: 600},
+    {representante: "R3", mes: 3, producto: 4, cantidad: 400},
+    {representante: "R3", mes: 4, producto: 1, cantidad: 300},
+    {representante: "R3", mes: 4, producto: 2, cantidad: 200},
+    {representante: "R3", mes: 4, producto: 3, cantidad: 230},
+    {representante: "R3", mes: 4, producto: 4, cantidad: 900},
+    {representante: "R3", mes: 5, producto: 1, cantidad: 800},
+    {representante: "R3", mes: 5, producto: 2, cantidad: 700},
+    {representante: "R3", mes: 5, producto: 3, cantidad: 600},
+    {representante: "R3", mes: 5, producto: 4, cantidad: 500},
+    {representante: "R3", mes: 6, producto: 1, cantidad: 400},
+    {representante: "R3", mes: 6, producto: 2, cantidad: 300},
+    {representante: "R3", mes: 6, producto: 3, cantidad: 430},
+    {representante: "R3", mes: 6, producto: 4, cantidad: 100},
+    {representante: "R3", mes: 7, producto: 1, cantidad: 900},
+    {representante: "R3", mes: 7, producto: 2, cantidad: 800},
+    {representante: "R3", mes: 7, producto: 3, cantidad: 700},
+    {representante: "R3", mes: 7, producto: 4, cantidad: 600},
+    {representante: "R3", mes: 8, producto: 1, cantidad: 500},
+    {representante: "R3", mes: 8, producto: 2, cantidad: 400},
+    {representante: "R3", mes: 8, producto: 3, cantidad: 300},
+    {representante: "R3", mes: 8, producto: 4, cantidad: 200},
+    {representante: "R3", mes: 9, producto: 1, cantidad: 100},
+    {representante: "R3", mes: 9, producto: 2, cantidad: 900},
+    {representante: "R3", mes: 9, producto: 3, cantidad: 800},
+    {representante: "R3", mes: 9, producto: 4, cantidad: 700},
+    {representante: "R3", mes: 10, producto: 1, cantidad: 600},
+    {representante: "R3", mes: 10, producto: 2, cantidad: 500},
+    {representante: "R3", mes: 10, producto: 3, cantidad: 400},
+    {representante: "R3", mes: 10, producto: 4, cantidad: 300},
+    {representante: "R3", mes: 11, producto: 1, cantidad: 200},
+    {representante: "R3", mes: 11, producto: 2, cantidad: 100},
+    {representante: "R3", mes: 11, producto: 3, cantidad: 900},
+    {representante: "R3", mes: 11, producto: 4, cantidad: 800},
+    {representante: "R3", mes: 12, producto: 1, cantidad: 700},
+    {representante: "R3", mes: 12, producto: 2, cantidad: 600},
+    {representante: "R3", mes: 12, producto: 3, cantidad: 500},
+    {representante: "R3", mes: 12, producto: 4, cantidad: 400},
+    
+  ];
+
+const totalVentas = {};
+
+for (const sell of sells) {
+    const {mes, producto, cantidad} = sell;
+    if (!totalVentas[mes]) {
+        totalVentas[mes] = {};
+    }
+    if (!totalVentas[mes][producto]) {
+        totalVentas[mes][producto] = 0;
+    }
+    totalVentas[mes][producto] += cantidad;
+}
+
+
+console.log("Ventas:");
+for (const sell of sells) {
+  console.log(`${sell.representante}, Mes ${sell.mes}, Producto ${sell.producto}: ${sell.cantidad}`);
+}
+
+console.log("Total de ventas:");
+for (const mes in totalVentas) {
+  for (const producto in totalVentas[mes]) {
+    console.log(`Mes ${mes}, Producto ${producto}: ${totalVentas[mes][producto]}`);
+  }
+}
